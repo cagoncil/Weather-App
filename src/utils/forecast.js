@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback) => {
 	    	return res.json()
 	    })
 	    .then(data => callback(undefined, 
-	    		`It is currently ${data.currently.temperature}°F out. There is a ${data.currently.precipProbability}% chance of rain. ${data.daily.summary}`
+	    		`It is currently ${data.currently.temperature}°F out. Today, the temperature high is ${data.daily.data[0].temperatureHigh}°F and the low is ${data.daily.data[0].temperatureLow}°F. There is a ${data.currently.precipProbability}% chance of rain. ${data.daily.summary}`
 	    	)
 	    )
 	    .catch(err => callback('Unable to connect to weather services! ' + err, undefined))
