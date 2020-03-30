@@ -45,7 +45,7 @@ app.get('/help', (req, res) => {
 	res.render('help', {
 		title: 'How-To',
 		name: 'Crystal Agoncillo',
-		message: 'Instructions for using this app'
+		message: `Instructions for using this app:`
 	})
 })
 

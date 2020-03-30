@@ -8,11 +8,13 @@
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-	<main>
-		{{>header}}
-		<h4>{{message}}</h4>
-	</main>
-
-	{{>footer}}
+	<div class='container'>
+		<main>
+			{{>header}}
+			<h3>{{message}}</h3>
+			<p>To check the weather of a location, enter the location name in the search box on the homepage. Your location can be as specific as a full mailing address, but at the very minimum, should be a city name or a zip code.</p>
+		</main>
+		{{>footer}}
+	</div>
 </body>
 </html>
