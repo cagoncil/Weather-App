@@ -111,6 +111,7 @@ button {
 
 	button:focus {
 		outline: 5px auto #c59090;
+		border-color: #ffdcc7;
 	}
 
 footer {
