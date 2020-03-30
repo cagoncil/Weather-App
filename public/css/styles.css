@@ -90,6 +90,18 @@ input {
 		outline: 5px auto #96bbc9;
 	}
 
+	::placeholder {
+		color: #8cadb9;
+	}
+
+	:-ms-input-placeholder {
+		color: #8cadb9;
+	}
+
+	::-ms-input-placeholder {
+		color: #8cadb9;
+	}
+
 button {
 	cursor: pointer;
 	border: 1.5px solid #fff;
@@ -101,16 +113,22 @@ button {
 		outline: 5px auto #c59090;
 	}
 
-::placeholder {
-	color: #8cadb9;
-}
-
 footer {
 	color: #113954;
 	border-top: 1px solid #eee;
 	padding: 0.5rem 0;
 	text-align: center;
 	background: #ffece1;
+}
+
+::selection {
+	color: #fff;
+	background: #96bbc9;
+}
+
+::-moz-selection {
+	color: #fff;
+	background: #96bbc9;
 }
 
 /*========== Media Queries ===========*/
