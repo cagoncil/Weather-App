@@ -36,7 +36,7 @@ header {
 	height: 100%;
 	z-index: 0;
 	opacity: 0.5;
-	background: url('../img/homepage.png') no-repeat center center;
+/*	background: url('../img/homepage.png') no-repeat center center;*/
 	background-size: cover;
 }
 
@@ -115,11 +115,10 @@ button {
 	}
 
 footer {
+	background: #fff;
 	color: #113954;
-	border-top: 1px solid #eee;
 	padding: 0.5rem 0;
 	text-align: center;
-	background: #ffece1;
 }
 
 ::selection {
@@ -131,6 +130,76 @@ footer {
 	color: #fff;
 	background: #96bbc9;
 }
+
+/*========== Background Modes ===========*/
+.normal::before {
+	background: url('../img/homepage.png') no-repeat center center;
+}
+
+	.normal footer {
+		background: #ffece1
+	}
+
+.partly-cloudy-day::before {
+	background: url('../img/partly-cloudy-day.png') no-repeat center center;
+}
+
+.partly-cloudy-night::before {
+	background: url('../img/partly-cloudy-night.png') no-repeat center center;
+}
+
+.cloudy::before {
+	background: url('../img/cloudy.png') no-repeat center center;
+}
+	.cloudy h1 {
+		color: #8cadb9;
+	}
+
+	.cloudy button {
+		border: 1.5px solid #fff;
+		background: #c2d1e6;
+		color: #3e5165;
+	}
+
+	.cloudy button:focus {
+		outline: 5px auto #aaa;
+		border-color: #8cadb9;
+	}
+
+.wind::before {
+	background: url('../img/wind.png') no-repeat center center;
+}
+
+.rain::before {
+	background: url('../img/rain.png') no-repeat center center;
+}
+
+.clear-day::before {
+	background: url('../img/clear-day.png') no-repeat center center;
+}
+
+.clear-night::before {
+	background: url('../img/clear-night.png') no-repeat center center;
+}
+
+.fog::before {
+	background: url('../img/fog.png') no-repeat center center;
+}
+
+.snow::before {
+	background: url('../img/snow.png') no-repeat center center;
+}
+
+.sleet::before {
+	background: url('../img/sleet.png') no-repeat center center;
+}
+
+.other::before {
+	background: url('../img/other.png') no-repeat center center;
+}
+
+
+
 
 /*========== Media Queries ===========*/
 
