@@ -137,6 +137,7 @@ footer {
 .normal::before {
 	background: url('../img/homepage.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 	.normal footer {
@@ -146,6 +147,8 @@ footer {
 .partly-cloudy-day::before {
 	background: url('../img/partly-cloudy-day.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
+
 }
 	.partly-cloudy-day h1 {
 		color: #686a90;
@@ -198,6 +201,7 @@ footer {
 .partly-cloudy-night::before {
 	background: url('../img/partly-cloudy-night.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 	.partly-cloudy-night h1 {
 		color: #653e5b;
@@ -246,6 +250,7 @@ footer {
 .cloudy::before {
 	background: url('../img/cloudy.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 	opacity: 0.45;
 }
 	.cloudy h1 {
@@ -296,6 +301,7 @@ footer {
 .wind::before {
 	background: url('../img/wind.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 	.wind h1, .wind button, .wind input {
 		color: #727386;
@@ -334,6 +340,7 @@ footer {
 .rain::before {
 	background: url('../img/rain.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 	opacity: 0.4;
 }
 	.rain h1, .rain header a, .rain input, .rain footer {
@@ -374,6 +381,7 @@ footer {
 .clear-day::before {
 	background: url('../img/clear-day.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 	.clear-day h1 {
 		color: #96bbc9;
@@ -421,6 +429,7 @@ footer {
 .clear-night::before {
 	background: url('../img/clear-night.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 	.clear-night h1 {
 		color: #b8d1db;
@@ -479,6 +488,7 @@ footer {
 .fog::before {
 	background: url('../img/fog.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 	.fog h1, .fog input {
 		color: #767e9c;
@@ -527,6 +537,7 @@ footer {
 .snow::before {
 	background: url('../img/snow.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 	.snow h1, .snow button, .snow input {
 		color: #5b636a;
@@ -574,6 +585,7 @@ footer {
 .sleet::before {
 	background: url('../img/sleet.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 	.sleet h1, .sleet header a, .sleet button, .sleet input {
@@ -618,6 +630,7 @@ footer {
 .other::before {
 	background: url('../img/other.png') no-repeat center center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 	.other h1, .other button, .other footer, .other input {
@@ -683,4 +696,14 @@ footer {
 	main {
 		width: 90vw;
 	}
+
+	header {
+		padding: 10px 0 20px;
+	}
+
+	h1 {
+		margin-top: 0;
+	}
+
+
 }
