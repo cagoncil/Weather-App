@@ -71,7 +71,7 @@ main {
 		font-weight: 400;
 	}
 
-	h3, p {
+	h3, h4, p {
 		color: #3e5165;
 	}
 
@@ -155,7 +155,7 @@ footer {
 		color: #727386;
 	}
 
-	.partly-cloudy-day p {
+	.partly-cloudy-day p, .partly-cloudy-day h4 {
 		color: #606285;
 	}
 	
@@ -194,7 +194,6 @@ footer {
 		color: #fff;
 		background: #ffdcc7;
 	}
-
 
 .partly-cloudy-night::before {
 	background: url('../img/partly-cloudy-night.png') no-repeat center center;
@@ -263,7 +262,7 @@ footer {
 		color: #555;
 	}
 
-	.cloudy p, .cloudy ::placeholder {
+	.cloudy p, .cloudy h4, .cloudy ::placeholder {
 		color: #555;
 	}
 
@@ -380,7 +379,7 @@ footer {
 		color: #96bbc9;
 	}
 
-	.clear-day p {
+	.clear-day p, .clear-day h4 {
 		color: #587891;
 	}
 
@@ -427,7 +426,7 @@ footer {
 		color: #b8d1db;
 	}
 
-	.clear-night p {
+	.clear-night p, .clear-night h4 {
 		color: #154769;
 	}
 
@@ -485,7 +484,7 @@ footer {
 		color: #767e9c;
 	}
 
-	.fog p {
+	.fog p, .fog h4 {
 		color: #55658a;
 	}
 
@@ -531,6 +530,10 @@ footer {
 }
 	.snow h1, .snow button, .snow input {
 		color: #5b636a;
+	}
+
+	.snow p, .snow h4 {
+		color: #4f565c;	
 	}
 
 	.snow header a, .snow ::placeholder {
@@ -617,8 +620,12 @@ footer {
 	background-size: cover;
 }
 
-	.other h1, .other p, .other button, .other footer, .other input {
+	.other h1, .other button, .other footer, .other input {
 		color: #555472;
+	}
+
+	.other p, .other h4 {
+		color: #4a4963;
 	}
 
 	.other header a {
