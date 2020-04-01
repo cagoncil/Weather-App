@@ -80,12 +80,12 @@ input, button {
 	width: 300px;
 	font-size: 1em;
 	text-align: center;
+	color: #b48d6e;
 }
 
 input {
 	border: none;
 	margin-bottom: 0.25em;
-	color: #5e8a9b;
 }
 
 	input:focus {
@@ -108,7 +108,6 @@ button {
 	cursor: pointer;
 	border: 1px solid #fff;
 	background: #ffdcc7;
-	color: #b48d6e;
 }
 
 	button:focus {
@@ -164,7 +163,7 @@ footer {
 	
 	.partly-cloudy-day button {
 		border-color: #96a2c9;
-		color: #5e8a9b;
+		color: #686a90;
 	}
 
 	.partly-cloudy-day button:focus {
@@ -172,20 +171,24 @@ footer {
 		border-color: #ffdcc7;
 	}
 
+	.partly-cloudy-day input {
+		color: #686a90;
+	}
+
 	.partly-cloudy-day input:focus {
 		outline-color: #96a2c9;
 	}
 
 		.partly-cloudy-day ::placeholder {
-			color: #5e8a9b;
+			color: #686a90;
 		}
 
 		.partly-cloudy-day :-ms-input-placeholder {
-			color: #5e8a9b;
+			color: #686a90;
 		} 
 
 		.partly-cloudy-day ::-ms-input-placeholder {
-			color: #5e8a9b;
+			color: #686a90;
 		}
 
 	.partly-cloudy-day ::selection {
