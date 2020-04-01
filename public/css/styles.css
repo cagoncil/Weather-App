@@ -387,7 +387,7 @@ footer {
 	background-attachment: fixed;
 }
 	.clear-day h1 {
-		color: #96bbc9;
+		color: #96aec9;
 	}
 
 	.clear-day p, .clear-day h4 {
@@ -407,7 +407,7 @@ footer {
 		}
 
 	.clear-day button {
-		background: #fbe1ff;
+		background: #f7e7f9;
 	}
 
 	.clear-day button:focus {
