@@ -13,7 +13,7 @@ const forecast = (latitude, longitude, callback) => {
 	    })
 	    .then(data => callback(undefined, {
 	    		weather: data.currently.icon, // to change background of app in public/js/app.js depending on weather
-	    		report: `It is currently ${data.currently.temperature}°F out. Today, the temperature high is ${data.daily.data[0].temperatureHigh}°F and the low is ${data.daily.data[0].temperatureLow}°F. There is a ${data.currently.precipProbability}% chance of rain. ${data.daily.summary}`
+	    		report: `It is currently ${Math.round(data.currently.temperature)} °F out. Today, the temperature high is ${Math.round(data.daily.data[0].temperatureHigh)} °F and the low is ${Math.round(data.daily.data[0].temperatureLow)} °F. There is a ${Math.round(data.currently.precipProbability)}% chance of rain. ${data.daily.summary}`
 	    	})
 	    )
 	    .catch(err => callback('Unable to connect to weather services! ' + err, undefined))
