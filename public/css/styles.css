@@ -704,8 +704,16 @@ footer {
 		padding: 10px 0 20px;
 	}
 
+	input, button {
+		width: 100%;
+	}
+
 	h1 {
 		margin-top: 0;
+	}
+
+	.clear-day button {
+		background: #d6d8f0;
 	}
 
 
