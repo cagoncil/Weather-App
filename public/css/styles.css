@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Nunito&display=swap');
 
 * {
 	box-sizing: border-box;
-	font-family: 'Comic Neue', cursive;
+	font-family: 'Nunito';
 }
 
 html {
@@ -36,8 +36,6 @@ header {
 	height: 100%;
 	z-index: 0;
 	opacity: 0.5;
-/*	background: url('../img/homepage.png') no-repeat center center;*/
-	background-size: cover;
 }
 
 main {
@@ -65,6 +63,10 @@ main {
 		text-decoration: none;
 	}
 
+		header a:last-child {
+			margin-right: 0;
+		}
+
 	h3 {
 		font-weight: 400;
 	}
@@ -75,7 +77,7 @@ main {
 
 input, button {
 	padding: 0.5em 1em;
-	width: 250px;
+	width: 300px;
 	font-size: 1em;
 	text-align: center;
 }
@@ -87,26 +89,26 @@ input {
 }
 
 	input:focus {
-		outline: 5px auto #96bbc9;
+		outline: 5px auto #ffdcc7;
 	}
 
 	::placeholder {
-		color: #8cadb9;
+		color: #b48d6e;
 	}
 
 	:-ms-input-placeholder {
-		color: #8cadb9;
+		color: #b48d6e;
 	}
 
 	::-ms-input-placeholder {
-		color: #8cadb9;
+		color: #b48d6e;
 	}
 
 button {
 	cursor: pointer;
-	border: 1.5px solid #fff;
+	border: 1px solid #fff;
 	background: #ffdcc7;
-	color: #b46f6e;
+	color: #b48d6e;
 }
 
 	button:focus {
@@ -115,7 +117,7 @@ button {
 	}
 
 footer {
-	background: #fff;
+	background: #eee;
 	color: #113954;
 	padding: 0.5rem 0;
 	text-align: center;
@@ -134,6 +136,7 @@ footer {
 /*========== Background Modes ===========*/
 .normal::before {
 	background: url('../img/homepage.png') no-repeat center center;
+	background-size: cover;
 }
 
 	.normal footer {
@@ -142,63 +145,521 @@ footer {
 
 .partly-cloudy-day::before {
 	background: url('../img/partly-cloudy-day.png') no-repeat center center;
+	background-size: cover;
 }
+	.partly-cloudy-day h1 {
+		color: #686a90;
+	}
+
+	.partly-cloudy-day header a {
+		color: #727386;
+	}
+
+	.partly-cloudy-day p {
+		color: #606285;
+	}
+	
+	.partly-cloudy-day button {
+		border-color: #96a2c9;
+		color: #5e8a9b;
+	}
+
+	.partly-cloudy-day button:focus {
+		outline-color: #96a2c9;
+		border-color: #ffdcc7;
+	}
+
+	.partly-cloudy-day input:focus {
+		outline-color: #96a2c9;
+	}
+
+		.partly-cloudy-day ::placeholder {
+			color: #5e8a9b;
+		}
+
+		.partly-cloudy-day :-ms-input-placeholder {
+			color: #5e8a9b;
+		} 
+
+		.partly-cloudy-day ::-ms-input-placeholder {
+			color: #5e8a9b;
+		}
+
+	.partly-cloudy-day ::selection {
+		color: #fff;
+		background: #ffdcc7;
+	}
+
+	.partly-cloudy-day ::-moz-selection {
+		color: #fff;
+		background: #ffdcc7;
+	}
+
 
 .partly-cloudy-night::before {
 	background: url('../img/partly-cloudy-night.png') no-repeat center center;
+	background-size: cover;
 }
+	.partly-cloudy-night h1 {
+		color: #653e5b;
+	}
+
+	.partly-cloudy-night button, .partly-cloudy-night input, .partly-cloudy-night ::placeholder {
+		color: #653e5b;
+	}
+
+	.partly-cloudy-night input {
+		background: #faf5f8;
+		border-color: #96a2c9;
+	}
+
+	.partly-cloudy-night input:focus {
+		outline-color: #96a2c9;
+	}
+
+	.partly-cloudy-night button {
+		border-color: #c59090;
+		background: #ffcec7;
+	}
+
+	.partly-cloudy-night header a {
+		color: #653e5b;
+	}
+
+		.partly-cloudy-night :-ms-input-placeholder {
+			color: #653e5b;
+		} 
+
+		.partly-cloudy-night ::-ms-input-placeholder {
+			color: #653e5b;
+		}
+
+	.partly-cloudy-night ::selection {
+		color: #fff;
+		background: #ffcec7;
+	}
+
+	.partly-cloudy-night ::-moz-selection {
+		color: #fff;
+		background: #ffcec7;
+	}
 
 .cloudy::before {
 	background: url('../img/cloudy.png') no-repeat center center;
+	background-size: cover;
+	opacity: 0.45;
 }
 	.cloudy h1 {
-		color: #8cadb9;
+		color: #a2b1bd;
+	}
+	
+	.cloudy input {
+		background: #fefefe;
 	}
 
 	.cloudy button {
-		border: 1.5px solid #fff;
-		background: #c2d1e6;
-		color: #3e5165;
+		border-color: #fff;
+		background: #d8dfe9;
+		color: #555;
 	}
 
+	.cloudy p, .cloudy ::placeholder {
+		color: #555;
+	}
+
+		.cloudy :-ms-input-placeholder {
+			color: #555;
+		}
+
+		.cloudy ::-ms-input-placeholder {
+			color: #555;
+		}
+
 	.cloudy button:focus {
-		outline: 5px auto #aaa;
-		border-color: #8cadb9;
+		outline-color: #aaa;
+		border-color: #d8dfe9;
+	}
+
+	.cloudy input:focus {
+		outline-color: #aaa;
+	}
+
+	.cloudy ::selection {
+		color: #fff;
+		background: #c8d2e0;
+	}
+
+	.cloudy ::-moz-selection {
+		color: #fff;
+		background: #c8d2e0;
 	}
 
 .wind::before {
 	background: url('../img/wind.png') no-repeat center center;
+	background-size: cover;
 }
+	.wind h1, .wind button, .wind input {
+		color: #727386;
+	}
+
+	.wind button {
+		background-color: #ffe5c7;
+	}
+
+	.wind input:focus, .wind button:focus {
+		outline-color: #a9aab6;
+	}
+	
+		.wind ::placeholder {
+			color: #727386;
+		}
+
+		.wind :-ms-input-placeholder {
+			color: #727386;
+		}
+
+		.wind ::-ms-input-placeholder {
+			color: #727386;
+		}
+
+	.wind ::selection {
+		color: #fff;
+		background: #a3adbc;
+	}
+
+	.wind ::-moz-selection {
+		color: #fff;
+		background: #a3adbc;
+	}
 
 .rain::before {
 	background: url('../img/rain.png') no-repeat center center;
+	background-size: cover;
+	opacity: 0.4;
 }
+	.rain h1, .rain header a, .rain input, .rain footer {
+		color: #607885;
+	}
+
+	.rain button {
+		background: #ffe1c7;
+		color: #607885;
+	}
+
+	.rain button:focus, .rain input:focus {
+		outline-color: #607885;
+	}
+
+		.rain ::placeholder {
+			color: #607885;
+		}
+
+		.rain :-ms-input-placeholder {
+			color: #607885;
+		}
+
+		.rain ::-ms-input-placeholder {
+			color: #607885;
+		}
+
+	.rain ::selection {
+		color: #fff;
+		background: #ffe1c7;
+	}
+
+	.rain ::-moz-selection {
+		color: #fff;
+		background: #ffe1c7;
+	}
 
 .clear-day::before {
 	background: url('../img/clear-day.png') no-repeat center center;
+	background-size: cover;
 }
+	.clear-day h1 {
+		color: #96bbc9;
+	}
+
+	.clear-day p {
+		color: #587891;
+	}
+
+	.clear-day header a, .clear-day input, .clear-day button, .clear-day ::placeholder {
+		color: #85a1c0;
+	}
+
+		.clear-day :-ms-input-placeholder {
+			color: #85a1c0;
+		}
+
+		.clear-day ::-ms-input-placeholder {
+			color: #85a1c0;
+		}
+
+	.clear-day button {
+		background: #fbe1ff;
+	}
+
+	.clear-day button:focus {
+		border-color: #fbe1ff;
+		outline-color: #85a1c0;
+	}
+
+	.clear-day input:focus {
+		outline-color: #85a1c0;
+	}
+
+	.clear-day ::selection {
+		color: #fff;
+		background: #eedbf2;
+	}
+
+	.clear-day ::-moz-selection {
+		color: #fff;
+		background: #eedbf2;
+	}
 
 .clear-night::before {
 	background: url('../img/clear-night.png') no-repeat center center;
+	background-size: cover;
 }
+	.clear-night h1 {
+		color: #b8d1db;
+	}
+
+	.clear-night p {
+		color: #154769;
+	}
+
+	.clear-night header a {
+		color: #fff;
+	}
+
+	.clear-night input {
+		border: 1px solid #6992b2;
+		color: #4f7999;
+	}
+
+	.clear-night button {
+		background: #96bbc9;
+		border-color: #6992b2;
+		color: #4f7999;
+	}
+
+	.clear-night button:focus {
+		border-color: #96bbc9;
+		outline-color: #6285a0;
+	}
+
+	.clear-night input:focus {
+		outline-color: #8cadb9;
+	}
+
+		.clear-night ::placeholder {
+			color: #4f7999;
+		}
+
+		.clear-night :-ms-input-placeholder {
+			color: #4f7999;
+		}
+
+		.clear-night ::-ms-input-placeholder {
+			color: #4f7999;
+		}
+
+	.clear-night ::selection {
+		color: #fff;
+		background: #b8d1db;
+	}
+
+	.clear-night ::-moz-selection {
+		color: #fff;
+		background: #b8d1db;
+	}
 
 .fog::before {
 	background: url('../img/fog.png') no-repeat center center;
+	background-size: cover;
 }
+	.fog h1, .fog input {
+		color: #767e9c;
+	}
+
+	.fog p {
+		color: #55658a;
+	}
+
+	.fog button {
+		color: #767e9c;
+		background-color: #cfd3dc;
+	}
+
+	.fog button:focus {
+		border-color: #cfd3dc;
+		outline-color: #96a6c9;
+	}
+
+	.fog input:focus {
+		outline-color: #96a6c9;
+	}
+
+		.fog ::placeholder {
+			color: #767e9c;
+		}
+
+		.fog :-ms-input-placeholder {
+			color: #767e9c;
+		}
+
+		.fog ::-ms-input-placeholder {
+			color: #767e9c;
+		}
+
+	.fog ::selection {
+		color: #fff;
+		background: #ccd2df;
+	}
+
+	.fog ::-moz-selection {
+		color: #fff;
+		background: #ccd2df;
+	}
 
 .snow::before {
 	background: url('../img/snow.png') no-repeat center center;
+	background-size: cover;
 }
+	.snow h1, .snow button, .snow input {
+		color: #5b636a;
+	}
+
+	.snow header a, .snow ::placeholder {
+		color: #737d85;
+	}
+
+		.snow :-ms-input-placeholder {
+			color: #737d85;
+		}
+
+		.snow ::-ms-input-placeholder {
+			color: #737d85;
+		}
+
+	.snow button {
+		background: #ced6db;
+	}
+
+	.snow button:focus {
+		border-color: #ced6db;
+		outline-color: #96bbc9;
+	}
+
+	.snow input:focus {
+		outline-color: #96bbc9;
+	}
+
+	.snow ::selection {
+		color: #fff;
+		background: #ced6db;
+	}
+
+	.snow ::-moz-selection {
+		color: #fff;
+		background: #ced6db;
+	}
 
 .sleet::before {
 	background: url('../img/sleet.png') no-repeat center center;
+	background-size: cover;
 }
+
+	.sleet h1, .sleet header a, .sleet button, .sleet input {
+		color: #6d767e;
+	}
+
+	.sleet button {
+		background: #cccfd3;
+	}
+
+	.sleet button:focus {
+		border-color: #bec2c7;
+		outline-color: #959ea3;
+	}
+
+	.sleet input:focus {
+		outline-color: #959ea3;
+	}
+
+		.sleet ::placeholder {
+			color: #a1acaf;
+		}
+
+		.sleet :-ms-input-placeholder {
+			color: #a1acaf;
+		}
+
+		.sleet ::-ms-input-placeholder {
+			color: #a1acaf;
+		}
+
+	.sleet ::selection {
+		color: #fff;
+		background: #c1c8ca;
+	}
+
+	.sleet ::-moz-selection {
+		color: #fff;
+		background: #c1c8ca;
+	}
 
 .other::before {
 	background: url('../img/other.png') no-repeat center center;
+	background-size: cover;
 }
 
+	.other h1, .other p, .other button, .other footer, .other input {
+		color: #555472;
+	}
 
+	.other header a {
+		color: #eee;
+	}
+
+	.other button {
+		background: #cfd3dc;
+		border-color: #979db2;
+	}
+
+	.other button:focus {
+		border-color: #cfd3dc;
+		outline-color: #96a6c9;
+	}
+
+	.other input:focus {
+		outline-color: #96a6c9;
+	}
+
+		.other ::placeholder {
+			color: #979db2;
+		}
+
+		.other :-ms-input-placeholder {
+			color: #979db2;
+		}
+
+		.other ::-ms-input-placeholder {
+			color: #979db2;
+		}
+
+	.other ::selection {
+		color: #fff;
+		background: #bbb8cb;
+	}
+
+	.other ::-moz-selection {
+		color: #fff;
+		background: #bbb8cb;
+	}
 
 
 /*========== Media Queries ===========*/
