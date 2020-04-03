@@ -1,5 +1,6 @@
 const weatherForm = document.querySelector('form')
-const search = document.querySelector('input')
+const unit = document.querySelector('#unit')
+const search = document.querySelector('#location')
 const messageOne = document.querySelector('#message-1')
 const temp = document.querySelector('#temp')
 const forecast = document.querySelector('#forecast')
@@ -19,10 +20,17 @@ weatherForm.addEventListener('submit', (e) => {
 	        	temp.textContent = ''
 	        	forecast.textContent = ''
 	        } else {
+	        	
 	        	messageOne.textContent = data.location
-	        	temp.textContent = data.temperature + ' °F'
-	        	forecast.textContent = `Today, the temperature high is ${data.highs} °F and the low is ${data.lows} °F. ${data.forecast}`
 
+	        	if (unit.checked === true) { // SI units
+					temp.textContent = Math.round((data.temperature-32)*5/9) + ' °C'
+	        		forecast.textContent = `Today, the temperature high is ${Math.round((data.highs-32)*5/9)} °C and the low is ${Math.round((data.lows-32)*5/9)} °C. ${data.forecast}`
+	        	} else { // US units
+	        		temp.textContent = data.temperature + ' °F'
+	        		forecast.textContent = `Today, the temperature high is ${data.highs} °F and the low is ${data.lows} °F. ${data.forecast}`
+	        	}
+	        	
 	        	const weather = data.weather
 
 	        	if (weather === "partly-cloudy-day") {
@@ -59,11 +67,16 @@ weatherForm.addEventListener('submit', (e) => {
 	              background.className = ''
 	              background.classList.add('container','other')
 	            }
-
-            document.querySelector("input").value = ""
+            
 	        }
 	    })
 	})
+	// search.value = ''
 
-	search.value = ''
+})
+
+unit.addEventListener('click', () => {
+	if (search.value.length > 0) {
+		document.querySelector('button').click()
+	}
 })

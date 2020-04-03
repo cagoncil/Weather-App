@@ -12,8 +12,18 @@
 		<main>
 			{{>header}}
 			<p>Get the weather anywhere, any time.</p>
+			
+			<div class="labels">
+			    <h4>°F</h4> 
+			    <label class="switch">
+			    	<input type="checkbox" id="unit">
+			    	<span class="slider round"></span>
+			    </label>
+			    <h4>°C</h4>  
+			 </div>
+			<br>
 			<form>
-				<input placeholder='Location' spellcheck=false onfocus="this.placeholder = ''" onblur="this.placeholder = 'Location'"><br>
+				<input placeholder='Location' spellcheck=false onfocus="this.placeholder = ''" onblur="this.placeholder = 'Location'" id='location'><br>
 				<button>Search</button>
 			</form>
 			<h4 id='message-1'></h4>

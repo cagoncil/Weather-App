@@ -15,7 +15,7 @@ body {
 }
 
 header {
-	padding: 16px 0 48px;
+	padding: 0 0 1em;
 }
 
 .container {
@@ -75,12 +75,19 @@ main {
 		color: #3e5165;
 	}
 
+	h1, h2, h3, h4, p, header a {
+		-webkit-transition: .4s;
+  		transition: .4s;
+	}
+
 input, button {
 	padding: 0.5em 1em;
 	width: 300px;
 	font-size: 1em;
 	text-align: center;
 	color: #b48d6e;
+	-webkit-transition: .5s;
+  	transition: .5s;
 }
 
 input {
@@ -130,6 +137,78 @@ footer {
 ::-moz-selection {
 	color: #fff;
 	background: #96bbc9;
+}
+
+/*========== Slider ===========*/
+
+.labels {
+	margin: auto;
+	width: 130px;
+	display: inline-flex;
+	margin-bottom: 1em;
+}
+	.labels h4 {
+		line-height: 24px;
+		margin: 0 auto;
+	}
+
+	.labels span {
+		text-align: center;
+		line-height: 24px;
+		font-weight: 700;
+	}
+
+.switch {
+	position: relative;
+	display: block;
+	width: 50px;
+	height: 24px;
+	margin: 0 auto;
+}
+
+	/* Hide default HTML checkbox */
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255,255,255,0.5);
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 16px;
+		width: 16px;
+		left: 4px;
+		bottom: 4px;
+		background-color: #b1c1c8;
+		-webkit-transition: .5s;
+		transition: .5s;
+	}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.slider.round {
+	border-radius: 30px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
 }
 
 /*========== Background Modes ===========*/
@@ -205,6 +284,10 @@ footer {
 		background: #ffdcc7;
 	}
 
+	.partly-cloudy-day .slider:before {
+		background-color: #686a90;
+	}
+
 .partly-cloudy-night::before {
 	background: url('../img/partly-cloudy-night.png') no-repeat center center;
 	background-size: cover;
@@ -254,17 +337,22 @@ footer {
 		background: #ffcec7;
 	}
 
+	.partly-cloudy-night .slider:before {
+		background-color: #485e75;
+	}
+
 .cloudy::before {
 	background: url('../img/cloudy.png') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
-	opacity: 0.45;
+	opacity: 0.55;
 }
 	.cloudy h1, .cloudy h2 {
 		color: #a2b1bd;
 	}
 	
 	.cloudy input {
+		color: #555;
 		background: #fefefe;
 	}
 
@@ -303,6 +391,10 @@ footer {
 	.cloudy ::-moz-selection {
 		color: #fff;
 		background: #c8d2e0;
+	}
+
+	.cloudy .slider:before {
+		background-color: #a2b1bd;
 	}
 
 .wind::before {
@@ -344,6 +436,10 @@ footer {
 		background: #a3adbc;
 	}
 
+	.wind .slider:before {
+		background-color: #727386;
+	}
+
 .rain::before {
 	background: url('../img/rain.png') no-repeat center center;
 	background-size: cover;
@@ -383,6 +479,10 @@ footer {
 	.rain ::-moz-selection {
 		color: #fff;
 		background: #ffe1c7;
+	}
+
+	.rain .slider:before {
+		background-color: #607885;
 	}
 
 .clear-day::before {
@@ -433,8 +533,12 @@ footer {
 		background: #eedbf2;
 	}
 
+	.clear-day .slider:before {
+		background-color: #c3c6e9;
+	}
+
 .clear-night::before {
-	background: url('../img/clear-night.png') no-repeat center center;
+	background: url('../img/clear-night.png') no-repeat center 10%;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -455,7 +559,7 @@ footer {
 	}
 
 	.clear-night input {
-		border: 1px solid #6992b2;
+		border-color: #6992b2;
 		color: #4f7999;
 	}
 
@@ -494,6 +598,10 @@ footer {
 	.clear-night ::-moz-selection {
 		color: #fff;
 		background: #b8d1db;
+	}
+
+	.clear-night .slider:before {
+		background-color: #6992b2;
 	}
 
 .fog::before {
@@ -545,6 +653,10 @@ footer {
 		background: #ccd2df;
 	}
 
+	.fog .slider:before {
+		background-color: #bcc4d5;
+	}
+
 .snow::before {
 	background: url('../img/snow.png') no-repeat center center;
 	background-size: cover;
@@ -593,6 +705,10 @@ footer {
 		background: #ced6db;
 	}
 
+	.snow .slider:before {
+		background-color: #737d85;
+	}
+
 .sleet::before {
 	background: url('../img/sleet.png') no-repeat center center;
 	background-size: cover;
@@ -638,6 +754,14 @@ footer {
 		background: #c1c8ca;
 	}
 
+	.sleet .slider {
+		background: rgba(109,118,126,0.2);
+	}
+
+	.sleet .slider:before {
+		background-color: #6d767e;
+	}
+
 .other::before {
 	background: url('../img/other.png') no-repeat center center;
 	background-size: cover;
@@ -658,16 +782,16 @@ footer {
 
 	.other button {
 		background: #cfd3dc;
-		border-color: #979db2;
+		border-color: #9694b1;
 	}
 
 	.other button:focus {
 		border-color: #cfd3dc;
-		outline-color: #96a6c9;
+		outline-color: #9694b1;
 	}
 
 	.other input:focus {
-		outline-color: #96a6c9;
+		outline-color: #9694b1;
 	}
 
 		.other ::placeholder {
@@ -690,6 +814,10 @@ footer {
 	.other ::-moz-selection {
 		color: #fff;
 		background: #bbb8cb;
+	}
+
+	.other .slider:before {
+		background-color: #9694b1;
 	}
 
 
@@ -720,6 +848,11 @@ footer {
 		margin-top: 0;
 	}
 
+	.clear-night::before {
+		background-position: center 78%;
+		background-size: 300vh;
+	}
+
 	.clear-day button {
 		background: #d6d8f0;
 	}
@@ -740,15 +873,19 @@ footer {
 	}
 
 	h2 {
-		margin: 0.3em;
+		margin: 0.2em;
 	}
 
 	h4 {
-		margin-top: 0.7em;
+		font-size: 0.8em;
 	}
 
 	input {
 		margin-bottom: 1px;
+	}
+
+	input, button {
+		padding: 0.3em 1em;
 	}
 
 	p#forecast, h4 {
@@ -757,6 +894,10 @@ footer {
 
 	p#forecast {
 		margin-top: 0;
+	}
+
+	p {
+		font-size: 0.85em;
 	}
 
 	footer {
