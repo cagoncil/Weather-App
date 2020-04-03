@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 const forecast = (latitude, longitude, callback) => {
 	const privateKeyDS = '8274611bfbc505861f7a05058bfaa6a1'
-	const urlDS = `https://api.darksky.net/forecast/${privateKeyDS}/${latitude},${longitude}` // ?units=us&lang=es
+	const urlDS = `https://api.darksky.net/forecast/${privateKeyDS}/${latitude},${longitude}/?units=auto` // ?units=us&lang=es
 
 	fetch(urlDS)
 	    .then(res => {
