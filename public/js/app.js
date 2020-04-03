@@ -20,8 +20,8 @@ weatherForm.addEventListener('submit', (e) => {
 	        	forecast.textContent = ''
 	        } else {
 	        	messageOne.textContent = data.location
-	        	temp.textContent = data.temperature
-	        	forecast.textContent = data.forecast
+	        	temp.textContent = data.temperature + ' °F'
+	        	forecast.textContent = `Today, the temperature high is ${data.highs} °F and the low is ${data.lows} °F. ${data.forecast}`
 
 	        	const weather = data.weather
 

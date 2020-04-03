@@ -63,7 +63,7 @@ app.get('/weather', (req, res) => {
 			return res.send(error) // can use return instead of else statement
 		}
 
-		forecast(latitude, longitude, (error, {weather, temperature, report}) => { // data.latitude, data.longitude
+		forecast(latitude, longitude, (error, {weather, temperature, tempHigh, tempLow, report}) => { // data.latitude, data.longitude
 			if (error) {
 				return res.send(error)
 			}
@@ -71,6 +71,8 @@ app.get('/weather', (req, res) => {
 			res.send({
 				weather: weather,
 				temperature: temperature,
+				highs: tempHigh,
+				lows: tempLow,
 				forecast: report,
 				location: location,
 				address: req.query.address
