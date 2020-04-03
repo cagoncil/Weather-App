@@ -76,8 +76,8 @@ main {
 	}
 
 	h1, h2, h3, h4, p, header a {
-		-webkit-transition: .4s;
-  		transition: .4s;
+		-webkit-transition: color .4s;
+  		transition: color .4s;
 	}
 
 input, button {
