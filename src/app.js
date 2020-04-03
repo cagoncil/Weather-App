@@ -63,13 +63,14 @@ app.get('/weather', (req, res) => {
 			return res.send(error) // can use return instead of else statement
 		}
 
-		forecast(latitude, longitude, (error, {weather, report}) => { // data.latitude, data.longitude
+		forecast(latitude, longitude, (error, {weather, temperature, report}) => { // data.latitude, data.longitude
 			if (error) {
 				return res.send(error)
 			}
 			// If both requests work, run code below:
 			res.send({
 				weather: weather,
+				temperature: temperature,
 				forecast: report,
 				location: location,
 				address: req.query.address

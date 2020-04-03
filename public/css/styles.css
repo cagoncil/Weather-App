@@ -153,6 +153,10 @@ footer {
 		color: #686a90;
 	}
 
+	.partly-cloudy-day h2 {
+		color: #cf775e;
+	}
+
 	.partly-cloudy-day header a {
 		color: #727386;
 	}
@@ -206,7 +210,7 @@ footer {
 	background-size: cover;
 	background-attachment: fixed;
 }
-	.partly-cloudy-night h1 {
+	.partly-cloudy-night h1, .partly-cloudy-night h2 {
 		color: #653e5b;
 	}
 
@@ -256,7 +260,7 @@ footer {
 	background-attachment: fixed;
 	opacity: 0.45;
 }
-	.cloudy h1 {
+	.cloudy h1, .cloudy h2 {
 		color: #a2b1bd;
 	}
 	
@@ -306,7 +310,7 @@ footer {
 	background-size: cover;
 	background-attachment: fixed;
 }
-	.wind h1, .wind button, .wind input {
+	.wind h1, .wind h2, .wind button, .wind input {
 		color: #727386;
 	}
 
@@ -346,7 +350,7 @@ footer {
 	background-attachment: fixed;
 	opacity: 0.4;
 }
-	.rain h1, .rain header a, .rain input, .rain footer {
+	.rain h1, .rain h2, .rain header a, .rain input, .rain footer {
 		color: #607885;
 	}
 
@@ -386,7 +390,7 @@ footer {
 	background-size: cover;
 	background-attachment: fixed;
 }
-	.clear-day h1 {
+	.clear-day h1, .clear-day h2 {
 		color: #96aec9;
 	}
 
@@ -436,6 +440,10 @@ footer {
 }
 	.clear-night h1 {
 		color: #b8d1db;
+	}
+
+	.clear-night h2 {
+		color: #ebf2f5;
 	}
 
 	.clear-night p, .clear-night h4 {
@@ -493,7 +501,7 @@ footer {
 	background-size: cover;
 	background-attachment: fixed;
 }
-	.fog h1, .fog input {
+	.fog h1, .fog h2, .fog input {
 		color: #767e9c;
 	}
 
@@ -542,7 +550,7 @@ footer {
 	background-size: cover;
 	background-attachment: fixed;
 }
-	.snow h1, .snow button, .snow input {
+	.snow h1, .snow h2, .snow button, .snow input {
 		color: #5b636a;
 	}
 
@@ -591,7 +599,7 @@ footer {
 	background-attachment: fixed;
 }
 
-	.sleet h1, .sleet header a, .sleet button, .sleet input {
+	.sleet h1, .sleet h2, .sleet header a, .sleet button, .sleet input {
 		color: #6d767e;
 	}
 
@@ -636,7 +644,7 @@ footer {
 	background-attachment: fixed;
 }
 
-	.other h1, .other button, .other footer, .other input {
+	.other h1, .other h2, .other button, .other footer, .other input {
 		color: #555472;
 	}
 
@@ -716,5 +724,43 @@ footer {
 		background: #d6d8f0;
 	}
 
+	footer {
+		padding: 0.4rem 0;
+	}
+}
 
+@media only screen and (max-width: 320px) {
+
+	header {
+		padding: 0;
+	}
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	h2 {
+		margin: 0.3em;
+	}
+
+	h4 {
+		margin-top: 0.7em;
+	}
+
+	input {
+		margin-bottom: 1px;
+	}
+
+	p#forecast, h4 {
+		margin-bottom: 0;
+	}
+
+	p#forecast {
+		margin-top: 0;
+	}
+
+	footer {
+		padding: 0;
+		font-size: 0.8em;
+	}
 }
