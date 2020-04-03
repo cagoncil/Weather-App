@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (e) => {
 	        	temp.textContent = ''
 	        	forecast.textContent = ''
 	        } else {
-	        	
+
 	        	messageOne.textContent = data.location
 
 	        	if (unit.checked === true) { // SI units
