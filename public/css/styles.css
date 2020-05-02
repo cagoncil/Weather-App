@@ -207,6 +207,10 @@ input:checked + .slider:before {
 }
 
 /*========== Background Modes ===========*/
+#container {
+	transition: 0.3s background-image linear;
+}
+
 .normal::before {
 	background: url('../img/homepage.png') no-repeat center center;
 	background-size: cover;
