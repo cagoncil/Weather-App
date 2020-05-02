@@ -6,6 +6,8 @@ const temp = document.querySelector('#temp')
 const forecast = document.querySelector('#forecast')
 const background = document.querySelector('#container')
 
+
+
 weatherForm.addEventListener('submit', (e) => {
 	e.preventDefault() // prevent default behavior of browser refreshing
 	const location = search.value;
@@ -13,8 +15,21 @@ weatherForm.addEventListener('submit', (e) => {
 	temp.textContent = ''
 	forecast.textContent = ''
 
-	fetch('/weather?address=' + location).then((response) => {
-	    response.json().then((data) => {
+	fetchWeather(location)
+
+})
+
+unit.addEventListener('click', () => {
+	if (search.value.length > 0) {
+		document.querySelector('button').click()
+	}
+})
+
+const fetchWeather = (place) => {
+	fetch('/weather?address=' + place)
+		.then((response) => {
+	    	response.json()
+	    .then((data) => {
 	        if (data.error) {
 	        	messageOne.textContent = data.error
 	        	temp.textContent = ''
@@ -71,12 +86,13 @@ weatherForm.addEventListener('submit', (e) => {
 	        }
 	    })
 	})
-	// search.value = ''
+}
 
+fetch('https://ipapi.co/json').then((response) => {
+	response.json()
+	.then((data) => {
+		fetchWeather(data.city)
+	})
 })
 
-unit.addEventListener('click', () => {
-	if (search.value.length > 0) {
-		document.querySelector('button').click()
-	}
-})
+

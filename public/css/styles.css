@@ -20,7 +20,7 @@ header {
 
 .container {
 	position: relative;
-	min-height: 100vh;
+	min-height: 100vh; /* min-height prevents background issues when mobile keyboard is active */
 	/*enable flexbox*/
 	display: flex;
 	flex-direction: column;
