@@ -20,8 +20,11 @@ weatherForm.addEventListener('submit', (e) => {
 })
 
 unit.addEventListener('click', () => {
-	if (search.value.length > 0) {
+	let location = search.value;
+	if (location) {
 		document.querySelector('button').click()
+	} else {
+		initiate()
 	}
 })
 
@@ -88,11 +91,15 @@ const fetchWeather = (place) => {
 	})
 }
 
-fetch('https://ipapi.co/json').then((response) => {
-	response.json()
-	.then((data) => {
-		fetchWeather(data.city)
-	})
-})
 
+
+const initiate = () => {
+	fetch('https://ipapi.co/json').then((response) => {
+		response.json()
+		.then((data) => {
+			fetchWeather(data.city)
+		})
+	})
+}
+initiate()
 
