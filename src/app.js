@@ -94,7 +94,7 @@ app.get('*', (req, res) => { // * = match anything that hasn't been matched so f
 	res.render('404', {
 		title: '404 Error',
 		name: 'Crystal Agoncillo',
-		message: 'Eror: Page not found.'
+		message: 'Error: Page not found.'
 	})
 })
 
