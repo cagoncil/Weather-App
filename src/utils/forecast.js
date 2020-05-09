@@ -16,7 +16,7 @@ const forecast = (latitude, longitude, callback) => {
 	    		temperature: `${Math.round(data.currently.temperature)}`,
 	    		tempHigh: `${Math.round(data.daily.data[0].temperatureHigh)}`,
 	    		tempLow: `${Math.round(data.daily.data[0].temperatureLow)}`,
-	    		report: `There is a ${Math.round(data.currently.precipProbability)}% chance of rain. ${data.daily.summary}`
+	    		report: `${data.daily.summary}`
 	    	})
 	    )
 	    .catch(err => callback('Unable to connect to weather services! ' + err, undefined))
