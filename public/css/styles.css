@@ -211,14 +211,26 @@ input:checked + .slider:before {
 	transition: 0.3s background-image linear;
 }
 
+form input {
+	background: rgba(255,255,255,0.3);
+}
+
+form input:focus {
+	background: rgba(255,255,255,0.5);
+}
+
 .normal::before {
 	background: url('../img/homepage.png') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
 }
 
+	.normal input, .normal button {
+		border: 1px solid #b48d6e;
+	}
+
 	.normal footer {
-		background: #ffece1
+		background: #ffece1;
 	}
 
 .partly-cloudy-day::before {
@@ -252,6 +264,7 @@ input:checked + .slider:before {
 	.partly-cloudy-day button {
 		border-color: #96a2c9;
 		color: #686a90;
+		opacity: 0.75;
 	}
 
 	.partly-cloudy-day button:focus {
@@ -261,6 +274,7 @@ input:checked + .slider:before {
 
 	.partly-cloudy-day input {
 		color: #686a90;
+		border: 1px solid #96a2c9;
 	}
 
 	.partly-cloudy-day input:focus {
@@ -314,17 +328,17 @@ input:checked + .slider:before {
 	}
 
 	.partly-cloudy-night input {
-		background: #faf5f8;
-		border-color: #96a2c9;
+		border: 1px solid #c59090;
 	}
 
 	.partly-cloudy-night input:focus {
-		outline-color: #96a2c9;
+		outline-color: #c59090;
 	}
 
 	.partly-cloudy-night button {
 		border-color: #c59090;
 		background: #ffcec7;
+		opacity: 0.75;
 	}
 
 	.partly-cloudy-night header a {
@@ -372,13 +386,14 @@ input:checked + .slider:before {
 	
 	.cloudy input {
 		color: #555;
-		background: #fefefe;
+		border: 1px solid #ccc;
 	}
 
 	.cloudy button {
-		border-color: #fff;
+		border-color: #ccc;
 		background: #d8dfe9;
 		color: #555;
+		opacity: 0.75;
 	}
 
 	.cloudy p, .cloudy h4, .cloudy ::placeholder {
@@ -434,6 +449,12 @@ input:checked + .slider:before {
 
 	.wind button {
 		background-color: #ffe5c7;
+		border: 1px solid #a9aab6;
+		opacity: 0.9;
+	}
+
+	.wind input {
+		border: 1px solid #a9aab6;
 	}
 
 	.wind input:focus, .wind button:focus {
@@ -483,9 +504,15 @@ input:checked + .slider:before {
 		color: #607885;
 	}
 
+	.rain input {
+		border: 1px solid #607885;
+	}
+
 	.rain button {
 		background: #ffe1c7;
 		color: #607885;
+		border: 1px solid #607885;
+		opacity: 0.85;
 	}
 
 	.rain button:focus, .rain input:focus {
@@ -552,11 +579,16 @@ input:checked + .slider:before {
 
 	.clear-day button {
 		background: #f7e7f9;
+		border: 1px solid #96aec9;
 	}
 
 	.clear-day button:focus {
-		border-color: #fbe1ff;
-		outline-color: #85a1c0;
+		border-color: #96aec9;
+		outline-color: #96aec9;
+	}
+
+	.clear-day input {
+		border: 1px solid #96aec9;
 	}
 
 	.clear-day input:focus {
@@ -606,7 +638,7 @@ input:checked + .slider:before {
 	}
 
 	.clear-night input {
-		border-color: #6992b2;
+		border: 1px solid #6992b2;
 		color: #4f7999;
 	}
 
@@ -614,6 +646,7 @@ input:checked + .slider:before {
 		background: #96bbc9;
 		border-color: #6992b2;
 		color: #4f7999;
+		opacity: 0.8;
 	}
 
 	.clear-night button:focus {
@@ -674,11 +707,16 @@ input:checked + .slider:before {
 	.fog button {
 		color: #767e9c;
 		background-color: #cfd3dc;
+		opacity: 0.8;
 	}
 
 	.fog button:focus {
 		border-color: #cfd3dc;
 		outline-color: #96a6c9;
+	}
+
+	.fog input {
+		border: 1px solid #cfd3dc;
 	}
 
 	.fog input:focus {
@@ -745,11 +783,17 @@ input:checked + .slider:before {
 
 	.snow button {
 		background: #ced6db;
+		border: 1px solid #737d85;
+		opacity: 0.75;
 	}
 
 	.snow button:focus {
 		border-color: #ced6db;
 		outline-color: #96bbc9;
+	}
+
+	.snow input {
+		border: 1px solid #737d85;
 	}
 
 	.snow input:focus {
@@ -788,11 +832,17 @@ input:checked + .slider:before {
 
 	.sleet button {
 		background: #cccfd3;
+		opacity: 0.75;
+		border-color: #6d767e;
 	}
 
 	.sleet button:focus {
 		border-color: #bec2c7;
 		outline-color: #959ea3;
+	}
+
+	.sleet input {
+		border: 1px solid #6d767e;
 	}
 
 	.sleet input:focus {
@@ -856,11 +906,16 @@ input:checked + .slider:before {
 	.other button {
 		background: #cfd3dc;
 		border-color: #9694b1;
+		opacity: 0.75;
 	}
 
 	.other button:focus {
 		border-color: #cfd3dc;
 		outline-color: #9694b1;
+	}
+
+	.other input {
+		border: 1px solid #9694b1;
 	}
 
 	.other input:focus {
